@@ -1,0 +1,33 @@
+<h1>The SuperHeroes</h1>
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <div class="wrap">
+    <section>
+      <div class="row">
+        <div id="the-basics">
+         {{typeahead-search
+          search=model
+          searchTerm=model.name
+          destination='model'
+          class='pickup-typeahead form-group'
+          property=model.name
+          placeholder='Search For Heroes'
+          }}
+        </div>
+        <h2>List of Heroes!</h2>
+        {{#each model as |hero|}}
+          <article class="listing">
+            {{#link-to 'hero' hero.id}}{{hero.name}}{{/link-to}}
+          </article>
+        {{/each}}
+      </div>
+    </section>
+  </div>
+  {{#link-to 'heroes' class="button"}}
+    SuperHeroes
+  {{/link-to}}
+  {{#link-to 'comics' class="button"}}
+    Comics
+  {{/link-to}}
+</div>

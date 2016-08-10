@@ -1,0 +1,22 @@
+{{#link-to 'index' class="button"}}
+    <em>SuperHeroes</em>
+{{/link-to}}
+<section>
+  <div class='heroes wrap'>
+    <div class="wrap">
+      <div class="row">
+        <h1>The SuperHeroes</h1>
+      </div>
+      {{#each model as |hero|}}
+      <div class="row">
+        <div class="small-12 medium-6 large-3 columns">
+          <img src="{{hero.thumbnail.path}}.jpg" alt="sample" class="thumbnail">
+        </div>
+        <div class="small-12 medium-6 large-9 columns">
+          {{hero.name}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

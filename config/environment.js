@@ -16,7 +16,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+        minQueryCount: 10,
+        maxQueryCount: 20
+      },
+      'marvel-public-key': '1fba083ab486de3b5b25b10bc2bc42e3',
+      'marvel-private-key': 'c66f979ede965163cfc1bd2838a431f306ee3f16'
   };
 
   if (environment === 'development') {

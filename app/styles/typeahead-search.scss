@@ -1,0 +1,25 @@
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-menu {
+  width: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+.tt-hint {
+  color: #000;
+}
+.tt-cursor {
+  background-color: lightgray;
+}
+
+.tt-suggestion {
+  padding: 5px;
+  color: lightgray;
+
+  &:hover {
+    background-color: #0078a0;
+  }
+}

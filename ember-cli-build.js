@@ -4,9 +4,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    'ember-cli-foundation-6-sass': {
+      'foundationJs': 'all'
+    }
     // Add options here
   });
-
+  app.import("bower_components/typeahead.js/dist/typeahead.jquery.js");
+  app.import('bower_components/JavaScript-MD5/js/md5.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

@@ -1,0 +1,39 @@
+{{#link-to 'index' class="button"}}
+    <em>SuperHeroes</em>
+{{/link-to}}
+<div class='heroe wrap'>
+  <section>
+    <div class='row'>
+    {{#each model as |hero|}}
+        {{hero.name}}
+        <img src="{{hero.thumbnail.path}}.jpg" alt="sample" class="thumbnail">
+
+        <h6>Events</h6>
+        {{#each hero.events.items as |events|}}
+          <ul>
+            <li>{{events.name}}</li>
+          </ul>
+        {{/each}}
+        <h6>Series</h6>
+        {{#each hero.series.items as |series|}}
+          <ul>
+            <li>{{series.name}}</li>
+          </ul>
+        {{/each}}
+        <h6>Stories</h6>
+        {{#each hero.stories.items as |stories|}}
+          <ul>
+            <li>{{stories.name}}</li>
+          </ul>
+        {{/each}}
+        <h6>Urls</h6>
+        {{#each hero.urls as |urls|}}
+          <ul>
+            <li> <a target="_blank" href="{{urls.url}}">{{urls.type}}</a></li>
+          </ul>
+        {{/each}}
+
+     {{/each}}
+    </div>
+  </section>
+</div>

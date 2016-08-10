@@ -1,0 +1,20 @@
+@import "settings";
+
+@import "foundation";
+@import "heroes";
+@import "typeahead-search";
+body {
+    background-color: #222;
+    color: #fff;
+}
+h1, h3, h2, h6 {
+ color: #fff;
+}
+.box-container {
+  max-width: 750px;
+}
+.heroe {
+  .thumbnail {
+    height: 200px;
+  }
+}

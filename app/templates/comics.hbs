@@ -1,0 +1,9 @@
+{{#link-to 'index' class="button"}}
+    <em>SuperHeroes</em>
+{{/link-to}}
+{{#each model as |comic|}}
+{{log 'hero' model}}
+  <li>{{comic.title}}</li>
+
+
+{{/each}}

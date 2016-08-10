@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', {
+    path: '/'
+  }, function() {});
+  this.route('heroes');
+  this.route('hero', { path: '/hero/:hero_id' });
+  this.route('comics');
 });
 
 export default Router;
