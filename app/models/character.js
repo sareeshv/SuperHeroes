@@ -5,6 +5,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   resourceURI: DS.attr('string'),
   thumbnail: DS.attr('string'),
+  comics: DS.attr('string'),
   events: DS.attr('string'),
   series: DS.attr('string'),
   stories: DS.attr('string'),

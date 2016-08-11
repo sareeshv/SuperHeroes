@@ -8,24 +8,46 @@
         {{hero.name}}
         <img src="{{hero.thumbnail.path}}.jpg" alt="sample" class="thumbnail">
 
+        <h6>Comics</h6>
+        {{#if hero.comics.items.length}}
+          {{#each hero.comics.items as |comics|}}
+            <ul>
+              <li>{{comics.name}}</li>
+            </ul>
+          {{/each}}
+        {{else}}
+          <li>No Comics</li>
+        {{/if}}
         <h6>Events</h6>
-        {{#each hero.events.items as |events|}}
-          <ul>
-            <li>{{events.name}}</li>
-          </ul>
-        {{/each}}
+        {{#if hero.events.items.length}}
+          {{#each hero.events.items as |events|}}
+            <ul>
+              <li>{{events.name}}</li>
+            </ul>
+          {{/each}}
+        {{else}}
+          <li>No Events</li>
+        {{/if}}
         <h6>Series</h6>
-        {{#each hero.series.items as |series|}}
-          <ul>
-            <li>{{series.name}}</li>
-          </ul>
-        {{/each}}
+        {{#if hero.series.items.length}}
+          {{#each hero.series.items as |series|}}
+            <ul>
+              <li>{{series.name}}</li>
+            </ul>
+          {{/each}}
+        {{else}}
+          <li>No Series</li>
+        {{/if}}
         <h6>Stories</h6>
-        {{#each hero.stories.items as |stories|}}
-          <ul>
-            <li>{{stories.name}}</li>
-          </ul>
-        {{/each}}
+        {{#if hero.stories.items.length}}
+          {{#each hero.stories.items as |stories|}}
+            <ul>
+              <li>{{stories.name}}</li>
+            </ul>
+          {{/each}}
+       {{else}}
+          <li>No Stories</li>
+        {{/if}}
         <h6>Urls</h6>
         {{#each hero.urls as |urls|}}
           <ul>

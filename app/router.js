@@ -12,7 +12,12 @@ Router.map(function() {
   }, function() {});
   this.route('heroes');
   this.route('hero', { path: '/hero/:hero_id' });
-  this.route('comics');
+  this.route('comics', {
+    resetNamespace: true
+  }, function(){
+      this.route('index', { path: '/' });
+      this.route('details', { path: '/details/:comic_id' });
+  })
 });
 
 export default Router;

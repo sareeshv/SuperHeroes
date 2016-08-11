@@ -1,0 +1,13 @@
+{{#link-to 'comics.index' class="button"}}
+    <em>Comics</em>
+{{/link-to}}
+<div class='comic wrap'>
+  <section>
+    <div class='row'>
+    {{#each model as |comic|}}
+        {{comic.title}}
+        <img src="{{comic.thumbnail.path}}.jpg" alt="sample" class="thumbnail">
+     {{/each}}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,16 @@
+{{#link-to 'index' class="button"}}
+    <em>SuperHeroes</em>
+{{/link-to}}
+<div class="jumbo">
+  <div class="wrap">
+    <section>
+          <div class="row">
+            {{#each model as |comic|}}
+              <article class="listing">
+                {{#link-to 'comics.details' comic.id}}{{comic.title}}{{/link-to}}
+              </article>
+            {{/each}}
+          </div>
+    </section>
+  </div>
+</div>

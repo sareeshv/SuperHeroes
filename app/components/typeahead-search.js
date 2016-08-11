@@ -60,7 +60,6 @@ export default Ember.Component.extend({
               processAsync(data.toArray());
             } else {
               processAsync();
-              // customerErrorsDataLayer('No destination returned for query: ' + query);
             }
           });
         }, 300);
@@ -89,16 +88,6 @@ export default Ember.Component.extend({
 
         suggestion: function(destination) {
           var result = '<div  class="tt-suggestion">';
-          // if (typeof(destination.get('apt_code')) === 'string' && destination.get('apt_code') !== '') {
-          //   result += '<i class="icon hero"></i><strong>';
-          //   result += destination.get('apt_code') +
-          //     '</strong>&nbsp;';
-          // } else if (destination.get('station') === true) {
-          //   result += '<i class="icon railway"></i>';
-          // } else {
-          //   result += '<i class="icon hero"></i>';
-          // }
-
           result += destination.get('name');
           result += '</div>';
           return result;
@@ -106,13 +95,8 @@ export default Ember.Component.extend({
       }
     }).on('typeahead:selected typeahead:autocompleted',
       Ember.run.bind(this, function(event, obj) {
-        debugger;
         search.set(destination + 'Destination', obj);
         search.set('id' , obj.get('id'));
-        // if (this.features.get('isMobile') || this.features.get(
-        //     'isTablet')) {
-        //   Ember.$(this.element).find('.typeahead').blur();
-        // }
       })
     ).on('typeahead:close',
       Ember.run.bind(this, function(event) {
