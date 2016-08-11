@@ -3,6 +3,7 @@
   <div class="right tomster"></div>
   <h2>Welcome!</h2>
   <div class="wrap">
+  <form>
     <section>
       <div class="row">
         <div id="the-basics">
@@ -15,6 +16,9 @@
           placeholder='Search For Heroes'
           }}
         </div>
+        <button id="clear-completed" type="submit" {{action 'goToHero' model}}>
+          See Details
+        </button>
         <h2>List of Heroes!</h2>
         {{#each model as |hero|}}
           <article class="listing">
@@ -23,6 +27,7 @@
         {{/each}}
       </div>
     </section>
+  </form>
   </div>
   {{#link-to 'heroes' class="button"}}
     SuperHeroes

@@ -106,16 +106,19 @@ export default Ember.Component.extend({
       }
     }).on('typeahead:selected typeahead:autocompleted',
       Ember.run.bind(this, function(event, obj) {
+        debugger;
         search.set(destination + 'Destination', obj);
-        if (this.features.get('isMobile') || this.features.get(
-            'isTablet')) {
-          Ember.$(this.element).find('.typeahead').blur();
-        }
+        search.set('id' , obj.get('id'));
+        // if (this.features.get('isMobile') || this.features.get(
+        //     'isTablet')) {
+        //   Ember.$(this.element).find('.typeahead').blur();
+        // }
       })
     ).on('typeahead:close',
       Ember.run.bind(this, function(event) {
         if (!Ember.$(event.target).val().trim()) {
           search.set(destination + 'Destination', null);
+          search.set('id' , null);
         }
       })
     );

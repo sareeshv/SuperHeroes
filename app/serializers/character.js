@@ -12,18 +12,6 @@ export default DS.RESTSerializer.extend({
         obj.relationships = {}
         return obj;
       })
-
-        // "data": {
-        //   "type": 'character',
-        //   "id": "1",
-        //   "attributes": {
-        //     // ... this article's attributes
-        //   },
-        //   "relationships": {
-        //     // ... this article's relationships
-        //   }
-        // }
-
     };
   }
 });
